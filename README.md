@@ -45,7 +45,62 @@ A full-stack social media application inspired by Twitter, built with React and 
 ### Backend Setup
 
 `bash
-cd backend/Chirp
+cd backend/TwitterClone
 dotnet restore
 dotnet ef database update
 dotnet watch
+
+The API will run on http://localhost:5283
+Frontend Setup
+cd frontend
+npm install
+npm run dev
+
+The app will run on http://localhost:5174
+📁 Project Structure
+Chirp/
+├── backend/
+│   ├── Controllers/
+│   │   ├── UsersController.cs
+│   │   ├── PostsController.cs
+│   │   ├── LikesController.cs
+│   │   ├── CommentsController.cs
+│   │   └── FollowsController.cs
+│   ├── Models/
+│   │   ├── User.cs
+│   │   ├── Post.cs
+│   │   ├── Like.cs
+│   │   ├── Comment.cs
+│   │   └── DTOs/
+│   └── Data/
+│       └── AppDbContext.cs
+└── frontend/
+    └── src/
+        ├── pages/
+        │   ├── LoginPage.jsx
+        │   ├── RegisterPage.jsx
+        │   ├── HomePage.jsx
+        │   ├── ExplorePage.jsx
+        │   └── ProfilePage.jsx
+        ├── Components/
+        │   ├── Sidebar.jsx
+        │   ├── Feed.jsx
+        │   ├── RightPanel.jsx
+        │   └── Logo.jsx
+        └── context/
+            └── AuthContext.jsx
+
+🔐 API Endpoints
+| Method | Endpoint | Auth | Description |
+|---|---|---|---|
+| POST | /api/users/register | ❌ | Register |
+| POST | /api/users/login | ❌ | Login |
+| GET | /api/posts | ❌ | Get all posts |
+| POST | /api/posts | ✅ | Create post |
+| DELETE | /api/posts/{id} | ✅ | Delete post |
+| POST | /api/likes/{postId} | ✅ | Like post |
+| DELETE | /api/likes/{postId} | ✅ | Unlike post |
+| GET | /api/comments/{postId} | ❌ | Get comments |
+| POST | /api/comments/{postId} | ✅ | Add comment |
+👤 Author
+Built by Amin — learning full-stack development one project at a time.
