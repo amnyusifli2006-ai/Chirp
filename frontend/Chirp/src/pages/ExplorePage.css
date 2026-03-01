@@ -1,0 +1,198 @@
+.explore-page {
+  display: flex;
+  min-height: 100vh;
+  background-color: #0a0f1e;
+  color: white;
+}
+
+.explore-content {
+  flex: 1;
+  border-left: 1px solid #1a3a6e;
+  border-right: 1px solid #1a3a6e;
+  overflow-y: auto;
+}
+
+/* ── Header ── */
+.explore-header {
+  position: sticky;
+  top: 0;
+  background-color: #0a0f1ecc;
+  backdrop-filter: blur(12px);
+  padding: 20px 24px;
+  border-bottom: 1px solid #1a3a6e;
+  z-index: 10;
+}
+
+.explore-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  background: linear-gradient(90deg, #fff, #1a8cff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #111827;
+  border: 1px solid #1a3a6e;
+  border-radius: 12px;
+  padding: 10px 16px;
+  transition: border-color 0.2s;
+}
+
+.search-bar:focus-within {
+  border-color: #1a8cff;
+  box-shadow: 0 0 0 3px #1a8cff22;
+}
+
+.search-icon {
+  color: #445;
+  flex-shrink: 0;
+}
+
+.search-input {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 0.95rem;
+  width: 100%;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #445;
+}
+
+/* ── Grid ── */
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 24px;
+}
+
+/* ── User Card ── */
+.user-card {
+  background-color: #0d1627;
+  border: 1px solid #1a3a6e;
+  border-radius: 16px;
+  overflow: hidden;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  animation: cardPop 0.3s ease forwards;
+}
+
+.user-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px #1a8cff22;
+  border-color: #1a8cff55;
+}
+
+@keyframes cardPop {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.user-card-top {
+  position: relative;
+  height: 80px;
+}
+
+.user-card-banner {
+  height: 100%;
+  background: linear-gradient(135deg, #0d1f3c, #1a3a6e, #1a8cff44);
+}
+
+.user-card-avatar {
+  position: absolute;
+  bottom: -22px;
+  left: 16px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a8cff, #0055cc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: 3px solid #0d1627;
+}
+
+.user-card-body {
+  padding: 28px 16px 16px;
+}
+
+.user-card-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 4px 0;
+}
+
+.user-card-bio {
+  font-size: 0.8rem;
+  color: #445;
+  margin: 0 0 14px 0;
+  line-height: 1.4;
+  min-height: 32px;
+}
+
+.user-follow-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 8px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid #1a8cff;
+  background: none;
+  color: #1a8cff;
+}
+
+.user-follow-btn:hover {
+  background: #1a8cff;
+  color: white;
+}
+
+.user-follow-btn.following {
+  background: #1a8cff22;
+  color: #1a8cff;
+  border-color: #1a8cff55;
+}
+
+.user-follow-btn.following:hover {
+  background: #ff4d4d22;
+  color: #ff4d4d;
+  border-color: #ff4d4d55;
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 60px;
+  color: #445;
+}
+
+.no-results-icon {
+  opacity: 0.3;
+}

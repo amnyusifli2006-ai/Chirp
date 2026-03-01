@@ -1,0 +1,9 @@
+.home-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #0a0f1e;
+  color: white;
+}
+.home-container > *:last-child {
+  margin-left: auto;
+}

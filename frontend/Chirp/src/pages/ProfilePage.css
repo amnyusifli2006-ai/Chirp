@@ -1,0 +1,143 @@
+.profile-page {
+  display: flex;
+  min-height: 100vh;
+  background-color: #0a0f1e;
+  color: white;
+}
+
+.profile-content {
+  flex: 1;
+  border-left: 1px solid #1a3a6e;
+  border-right: 1px solid #1a3a6e;
+}
+
+/* ── Header ── */
+.profile-banner {
+  height: 150px;
+  background: linear-gradient(135deg, #0d1f3c, #1a3a6e, #1a8cff33);
+}
+
+.profile-info {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  padding: 0 24px 20px;
+  border-bottom: 1px solid #1a3a6e;
+  margin-top: -40px;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a8cff, #0055cc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  border: 4px solid #0a0f1e;
+  flex-shrink: 0;
+}
+
+.profile-details {
+  padding-bottom: 4px;
+}
+
+.profile-username {
+  font-size: 1.3rem;
+  color: white;
+  margin: 0 0 8px 0;
+}
+
+.profile-stats {
+  display: flex;
+  gap: 20px;
+  color: #556;
+  font-size: 0.9rem;
+}
+
+.profile-stats strong {
+  color: white;
+}
+
+/* ── Posts ── */
+.profile-posts {
+  padding: 16px 0;
+}
+
+.no-posts {
+  text-align: center;
+  color: #445;
+  padding: 40px;
+}
+
+.profile-post-card {
+  padding: 16px 24px;
+  border-bottom: 1px solid #111827;
+  transition: background 0.2s;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.profile-post-card:hover {
+  background-color: #0d1627;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.post-date {
+  color: #445;
+  font-size: 0.85rem;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #445;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition:
+    color 0.2s,
+    background 0.2s;
+}
+
+.delete-btn:hover {
+  color: #ff4d4d;
+  background-color: #ff4d4d11;
+}
+
+.profile-post-content {
+  color: #dde;
+  line-height: 1.6;
+  margin: 0 0 10px 0;
+}
+
+.profile-post-footer {
+  display: flex;
+  gap: 16px;
+}
+
+.post-likes {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #556;
+  font-size: 0.85rem;
+}

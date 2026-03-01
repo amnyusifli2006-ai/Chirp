@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0f1e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d1f3c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="envelopeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a8cff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0055cc;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="flapGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3aa0ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a8cff;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#1a8cff" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="url(#bgGrad)" stroke="#1a3a6e" stroke-width="1.5"/>
+
+  <!-- Envelope body -->
+  <rect x="38" y="72" width="124" height="82" rx="8" ry="8" fill="url(#envelopeGrad)" filter="url(#shadow)"/>
+
+  <!-- Envelope back flap (bottom fold lines) -->
+  <line x1="38" y1="154" x2="100" y2="118" stroke="#0a4aaa" stroke-width="1" opacity="0.5"/>
+  <line x1="162" y1="154" x2="100" y2="118" stroke="#0a4aaa" stroke-width="1" opacity="0.5"/>
+
+  <!-- Envelope top flap (open) -->
+  <path d="M38 72 L100 112 L162 72" fill="url(#flapGrad)" stroke="#0055cc" stroke-width="1"/>
+
+  <!-- V fold line -->
+  <path d="M38 72 L100 108 L162 72" fill="none" stroke="#3ab4ff" stroke-width="1" opacity="0.4"/>
+
+  <!-- Small wing lines on sides of envelope (speed/message effect) -->
+  <line x1="20" y1="95" x2="35" y2="95" stroke="#1a8cff" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+  <line x1="15" y1="105" x2="35" y2="105" stroke="#1a8cff" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <line x1="20" y1="115" x2="35" y2="115" stroke="#1a8cff" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+
+  <!-- Text: Chirp -->
+  <text x="100" y="178" 
+        font-family="Arial, sans-serif" 
+        font-weight="bold" 
+        font-size="18" 
+        fill="#1a8cff" 
+        text-anchor="middle" 
+        letter-spacing="3">CHIRP</text>
+</svg>
