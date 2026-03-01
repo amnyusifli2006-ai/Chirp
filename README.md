@@ -2,7 +2,7 @@
 
 A full-stack social media application inspired by Twitter, built with React and ASP.NET Core Web API.
 
-![Chirp](https://img.shields.io/badge/status-active-brightgreen) ![React](https://img.shields.io/badge/React-18-blue) ![.NET](https://img.shields.io/badge/.NET-8-purple)
+![Chirp](https://img.shields.io/badge/status-active-brightgreen) ![React](https://img.shields.io/badge/React-18-blue) ![.NET](https://img.shields.io/badge/.NET-9-purple)
 
 ---
 
@@ -30,7 +30,7 @@ A full-stack social media application inspired by Twitter, built with React and 
 
 ### Backend
 
-- ASP.NET Core Web API (.NET 8)
+- ASP.NET Core Web API (.NET 9)
 - Entity Framework Core
 - SQLite
 - JWT Authentication
@@ -43,7 +43,7 @@ A full-stack social media application inspired by Twitter, built with React and 
 ### Prerequisites
 
 - Node.js 18+
-- .NET 8 SDK
+- .NET 9 SDK
 
 ### Backend Setup
 
